@@ -74,7 +74,7 @@ class MailFinderService implements MailFinderServiceInterface
                     foreach ($searchFolder as $folder) {
                         $filePath = $path . '/email/' . $folder . '/' . $technicalName . '/' . $type . $supportedExtension;
                         if (file_exists($filePath) && $content = $availableLoader->load($filePath)) {
-                            $this->fixTranslator($businessEvent);
+//                            $this->fixTranslator($businessEvent);
 
                             return $returnFolder ? $filePath : $content;
                         }
